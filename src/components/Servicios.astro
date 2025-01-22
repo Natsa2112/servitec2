@@ -1,0 +1,83 @@
+---
+---
+
+<section id="servicios" class="py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-white mb-16">
+            Nuestros Servicios
+        </h2>
+        
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <!-- Columna Izquierda: Servicios -->
+            <div class="flex-1 space-y-12">
+                <!-- Servicio 1 -->
+                <div class="service-card">
+                    <h3 class="text-2xl font-semibold text-[#4994d2] mb-4">
+                        Instalación Profesional
+                    </h3>
+                    <p class="text-gray-300">
+                        Instalación experta de sistemas de aire acondicionado para hogares y empresas. 
+                        Nuestro equipo altamente capacitado garantiza un servicio eficiente y confiable, 
+                        adaptado a sus necesidades específicas.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card">
+                    <h3 class="text-2xl font-semibold text-[#4994d2] mb-4">
+                        Mantenimiento Preventivo
+                    </h3>
+                    <p class="text-gray-300">
+                        Servicios de mantenimiento regular para mantener su sistema funcionando de manera óptima. 
+                        Incluye limpieza profunda, verificación de componentes y ajustes necesarios para 
+                        prevenir problemas futuros.
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card">
+                    <h3 class="text-2xl font-semibold text-[#4994d2] mb-4">
+                        Reparación y Diagnóstico
+                    </h3>
+                    <p class="text-gray-300">
+                        Solución rápida y efectiva para cualquier problema con su aire acondicionado. 
+                        Diagnóstico preciso y reparaciones profesionales para restaurar el funcionamiento 
+                        de su sistema.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Imagen -->
+            <div class="flex-1 lg:sticky lg:top-8">
+                <div class="bg-[#1B365D]/50 backdrop-blur-sm p-4 rounded-lg border border-[#4994d2]/30 aspect-square">
+                    <div class="w-full h-full flex items-center justify-center text-gray-400">
+                        <span class="text-sm">Imagen del servicio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-card {
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background: rgba(27, 54, 93, 0.3);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(73, 148, 210, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-2px);
+        background: rgba(27, 54, 93, 0.4);
+        border-color: rgba(73, 148, 210, 0.3);
+    }
+
+    @media (max-width: 1024px) {
+        .service-card {
+            transform: none !important;
+        }
+    }
+</style>
