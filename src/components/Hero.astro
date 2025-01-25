@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import aireCocina from '../img/1e-cocina002.webp';
 ---
 
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -9,16 +11,19 @@
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
           Expertos en <span class="text-[#4994d2]">Aire Acondicionado</span>
         </h1>
+        <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+          Creando Ambientes perfectos
+        </h2>
         <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
           Brindamos soluciones profesionales en instalación, mantenimiento y reparación de sistemas de aire acondicionado para hogares y empresas.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a href="#contacto" 
-             class="px-8 py-3 bg-[#4994d2] text-white rounded-lg font-semibold hover:bg-[#1B365D] transition-colors">
+              class="px-8 py-3 bg-[#4994d2] text-white rounded-lg font-semibold hover:bg-[#1B365D] transition-colors">
             Contactar Ahora
           </a>
           <a href="#servicios" 
-             class="px-8 py-3 border-2 border-[#4994d2] text-[#4994d2] rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              class="px-8 py-3 border-2 border-[#4994d2] text-[#4994d2] rounded-lg font-semibold hover:bg-white/10 transition-colors">
             Ver Servicios
           </a>
         </div>
@@ -27,10 +32,10 @@
       <!-- Right Column: Image -->
       <div class="flex-1 relative">
         <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent rounded-lg z-10"></div>
-        <img 
-          src="/hero-image.webp" 
-          alt="Técnico profesional de ServiTec instalando aire acondicionado" 
-          class="w-full max-w-lg mx-auto rounded-lg shadow-2xl relative z-0"
+        <Image 
+          src={aireCocina}
+          alt="Cocina con aire acondicionado en tonalidad blanca" 
+          class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
           width="512"
           height="512"
         />
