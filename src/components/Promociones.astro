@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import aire1 from '../img/aire1.webp';
+import aire2 from '../img/aire2.webp';
 ---
 
 <section id="promociones" class="py-20">
@@ -15,7 +18,13 @@
                 </div>
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2 aspect-square bg-[#1B365D]/50 rounded-lg flex items-center justify-center">
-                        <span class="text-gray-400 text-sm">Imagen de la promoción</span>
+                        <Image 
+            src={aire1}
+            alt="Unidad externa de aire acondicionado." 
+            class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
+            width="512"
+            height="512"
+            />
                     </div>
                     <div class="w-full md:w-1/2">
                         <h3 class="text-2xl font-semibold text-[#4994d2] mb-4">Mantenimiento Preventivo</h3>
@@ -38,7 +47,13 @@
                 </div>
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2 aspect-square bg-[#1B365D]/50 rounded-lg flex items-center justify-center">
-                        <span class="text-gray-400 text-sm">Imagen de la promoción</span>
+                        <Image 
+            src={aire2}
+            alt="Unidad externa de aire acondicionado." 
+            class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
+            width="512"
+            height="512"
+            />
                     </div>
                     <div class="w-full md:w-1/2">
                         <h3 class="text-2xl font-semibold text-[#4994d2] mb-4">Instalación + Mantenimiento</h3>

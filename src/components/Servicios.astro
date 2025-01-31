@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import aireCocina001 from '../img/cocina-001.webp';
 ---
 
 <section id="servicios" class="py-20">
@@ -51,7 +53,13 @@
             <div class="flex-1 lg:sticky lg:top-8">
                 <div class="bg-[#1B365D]/50 backdrop-blur-sm p-4 rounded-lg border border-[#4994d2]/30 aspect-square">
                     <div class="w-full h-full flex items-center justify-center text-gray-400">
-                        <span class="text-sm">Imagen del servicio</span>
+                        <Image 
+            src={aireCocina001}
+            alt="Cocina comedor con tonalidades blancas y tambien con detalles en madera." 
+            class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
+            width="512"
+            height="512"
+            />
                     </div>
                 </div>
             </div>
