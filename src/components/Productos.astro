@@ -13,7 +13,7 @@ import controlRemoto from '../img/mujer.webp';
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Producto 1 -->
-            <div class="product-card group">
+            <div class="product-card group" style="content-visibility: auto; contain-intrinsic-size: 0 500px;">
                 <div class="aspect-square bg-[#1B365D]/50 rounded-t-lg overflow-hidden">
                     <div class="w-full h-full flex items-center justify-center text-gray-400">
                         <Image 
@@ -22,6 +22,8 @@ import controlRemoto from '../img/mujer.webp';
             class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
             width="512"
             height="512"
+            loading="lazy"
+            decoding="async"
             />
                     </div>
                 </div>
@@ -38,7 +40,7 @@ import controlRemoto from '../img/mujer.webp';
             </div>
 
             <!-- Producto 2 -->
-            <div class="product-card group">
+            <div class="product-card group" style="content-visibility: auto; contain-intrinsic-size: 0 500px;">
                 <div class="aspect-square bg-[#1B365D]/50 rounded-t-lg overflow-hidden">
                     <div class="w-full h-full flex items-center justify-center text-gray-400">
                         <Image 
@@ -47,6 +49,8 @@ import controlRemoto from '../img/mujer.webp';
                         class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
                         width="512"
                         height="512"
+                        loading="lazy"
+                        decoding="async"
                         />
                     </div>
                 </div>
@@ -63,7 +67,7 @@ import controlRemoto from '../img/mujer.webp';
             </div>
 
             <!-- Producto 3 -->
-            <div class="product-card group">
+            <div class="product-card group" style="content-visibility: auto; contain-intrinsic-size: 0 500px;">
                 <div class="aspect-square bg-[#1B365D]/50 rounded-t-lg overflow-hidden">
                     <div class="w-full h-full flex items-center justify-center text-gray-400">
                         <Image 
@@ -72,6 +76,8 @@ import controlRemoto from '../img/mujer.webp';
                         class="w-full h-full object-cover rounded-lg shadow-2xl relative z-0"
                         width="512"
                         height="512"
+                        loading="lazy"
+                        decoding="async"
                         />
                     </div>
                 </div>
@@ -93,13 +99,18 @@ import controlRemoto from '../img/mujer.webp';
 <style>
     .product-card {
         border-radius: 0.5rem;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(73, 148, 210, 0.1);
+        transform: translateZ(0);
+        will-change: transform;
+        transition: transform 0.3s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .product-card {
+            transition: none !important;
+        }
     }
 
     .product-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(73, 148, 210, 0.3);
+        transform: translateY(-5px);
     }
 </style>

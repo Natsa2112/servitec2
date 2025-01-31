@@ -9,7 +9,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Testimonio 1 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" style="content-visibility: auto; contain-intrinsic-size: 0 300px;">
                 <div class="mb-6">
                     <div class="flex gap-1">
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -42,7 +42,7 @@
             </div>
 
             <!-- Testimonio 2 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" style="content-visibility: auto; contain-intrinsic-size: 0 300px;">
                 <div class="mb-6">
                     <div class="flex gap-1">
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -75,7 +75,7 @@
             </div>
 
             <!-- Testimonio 3 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" style="content-visibility: auto; contain-intrinsic-size: 0 300px;">
                 <div class="mb-6">
                     <div class="flex gap-1">
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -117,12 +117,18 @@
         background: rgba(27, 54, 93, 0.3);
         backdrop-filter: blur(8px);
         border: 1px solid rgba(73, 148, 210, 0.2);
-        transition: all 0.3s ease;
+        transform: translateZ(0);
+        will-change: transform;
+        transition: transform 0.3s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .testimonial-card {
+            transition: none !important;
+        }
     }
 
     .testimonial-card:hover {
-        transform: translateY(-4px);
-        background: rgba(27, 54, 93, 0.4);
-        border-color: rgba(73, 148, 210, 0.3);
+        transform: translateY(-5px);
     }
 </style>
